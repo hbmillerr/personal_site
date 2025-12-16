@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/*
+    Rose Pine
+    https://github.com/rose-pine
+*/
+:root {
+	--header-color: #0b0a10;
+	--primary-color: #191724;
+	--primary-light-color: #36324e;
+	--muted-color: #6e6a86;
+	--surface-color: #1f1d2e;
+	--hover-color: #272832;
+	/* --text-color: #c9c9c9; */
+	--highlight-high-color: #524f67;
+	--text-color: #e0def4;
+	--text-hover-color: #ffffff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Inter", "Segoe UI", sans-serif;
+	color: var(--text-color);
+	line-height: 1.5;
+}
+
+body {
+	min-height: 100vh;
+	min-height: 100dvh;
+	background-color: var(--primary-color);
+}
+
+main {
+	padding: min(8em, 10%);
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+main p {
+	/* margin-top: 0.35em; */
+	margin-bottom: 1rem;
+}
+
+main h1 {
+	/* font-size: 3rem; */
+	line-height: 1;
+}
+
+section .inner {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	gap: 5em;
+}
+
+.portrait {
+	object-fit: cover;
+	height: 300px;
+	width: 300px;
+
+	border-radius: 0.3rem;
+}
+
+ul.skills-list {
+	display: grid;
+	grid-template-columns: repeat(2, 128px);
+	list-style-position: inside;
+}
+
+ul.skills-list li {
+	font-size: 0.9rem;
+}
+
+.other-page-link {
+	display: inline-block;
+	margin-top: 1em;
+
+	text-decoration: none;
+	border-radius: 5px;
+
+	padding: 0.6em;
+
+	color: var(--text-color);
+	background-color: var(--surface-color);
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1.6em;
+	background-color: var(--header-color);
+	/* border-bottom: 1px solid var(--hover-color); */
+}
+
+nav .logo {
+	height: 64px;
+	width: auto;
+	margin-right: auto;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav a {
+	display: flex;
+	text-decoration: none;
+	color: var(--text-color);
+	padding: 0.5em 1em;
+	transition: color 200ms ease;
+}
+
+nav a:hover {
+	color: var(--text-hover-color);
+}
+
+nav a.active-link {
+	border-bottom: 2px solid var(--highlight-high-color);
+}
+
+.github-logo {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+	transition: filter 150ms ease;
+	filter: brightness(1.5) invert(0);
+}
+
+.github-li a:hover {
+	background-color: transparent;
+}
+
+.github-logo:hover {
+	filter: brightness(1) invert(1);
+}
