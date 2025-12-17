@@ -23,9 +23,9 @@
 	box-sizing: border-box;
 }
 
-*:hover {
+/* *:hover {
 	outline: 1px blue solid;
-}
+} */
 
 html {
 	font-family: "Inter", "Segoe UI", sans-serif;
