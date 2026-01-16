@@ -1,0 +1,226 @@
+/*
+	Hayden Miller
+	T00782141
+	Assignment 3
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/*
+    Rose Pine
+    https://github.com/rose-pine
+*/
+
+:root {
+	color-scheme: light-dark;
+
+	/*legacy colors*/
+	--header-color: #0b0a10;
+	/* --muted-color: #6e6a86; */
+	--hover-color: #272832;
+	/* --text-color: #c9c9c9; */
+	--text-hover-color: #ffffff;
+
+	--color-base: 249deg 22% 12%;
+	--color-surface: 247deg 23% 15%;
+	--color-overlay: 248deg 25% 18%;
+	--color-muted: 249deg 12% 47%;
+	--color-subtle: 248deg 15% 61%;
+	--color-text: 245deg 50% 91%;
+	--color-love: 343deg 76% 68%;
+	--color-gold: 35deg 88% 72%;
+	--color-rose: 2deg 55% 83%;
+	--color-pine: 197deg 49% 38%;
+	--color-foam: 189deg 43% 73%;
+	--color-iris: 267deg 57% 78%;
+	--color-highlight-low: 248, 17%, 15%;
+	--color-highlight-medium: 249, 14%, 28%;
+	--color-highlight-high: 249, 13%, 36%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* 
+*:hover {
+	outline: 1px blue solid;
+} */
+
+html {
+	font-family: "Inter", "Segoe UI", sans-serif;
+	color: hsl(var(--color-text));
+	line-height: 1.5;
+}
+
+body {
+	min-height: 100vh;
+	min-height: 100dvh;
+	background-color: hsl(var(--color-base));
+}
+
+::placeholder {
+	color: hsl(var(--color-muted));
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.font-medium {
+	font-weight: 500;
+}
+
+.text-small {
+	/* font-size: 0.875rem; */
+	/* line-height: 1.25; */
+	/* line-height: 1.25rem; */
+}
+
+.visually-hidden {
+	visibility: hidden;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1.6em;
+	background-color: var(--header-color);
+	border-bottom: 2px solid hsl(var(--color-muted) / 0.1);
+}
+
+nav .logo {
+	height: 64px;
+	width: auto;
+	margin-right: auto;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav a {
+	display: flex;
+	text-decoration: none;
+	color: hsl(var(--color-text));
+	padding: 0.5em 1em;
+	transition: color 200ms ease;
+}
+
+nav a:hover {
+	color: var(--text-hover-color);
+}
+
+nav a.active-link {
+	border-bottom: 2px solid hsl(var(--color-iris));
+}
+
+.github-logo {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+	transition: filter 150ms ease;
+	filter: brightness(1.5) invert(0);
+}
+
+.github-li a:hover {
+	background-color: transparent;
+}
+
+.github-logo:hover {
+	filter: brightness(1) invert(1);
+}
+
+main {
+	padding: min(8em, 10%);
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+main p {
+	/* margin-top: 0.35em; */
+	margin-bottom: 1rem;
+}
+
+main h1 {
+	/* font-size: 3rem; */
+	line-height: 1;
+}
+
+section .inner {
+	display: grid;
+}
+
+section .heading {
+	font-size: 2em;
+}
+
+#about .inner {
+	grid-template-columns: 3fr 2fr;
+	gap: 5em;
+}
+
+.portrait {
+	object-fit: cover;
+	height: 300px;
+	width: 300px;
+
+	border-radius: 0.3rem;
+}
+
+ul.skills-list {
+	display: grid;
+	grid-template-columns: repeat(2, 128px);
+	/*list-style-type: circle;*/
+	list-style-position: inside;
+}
+
+ul.skills-list li {
+	font-size: 0.9rem;
+}
+
+.other-page-link {
+	display: inline-block;
+	margin-top: 1em;
+
+	text-decoration: none;
+	border-radius: 5px;
+
+	padding: 0.6em;
+
+	color: hsl(var(--color-text));
+	background-color: hsl(var(--color-surface));
+}
+
+/* Duplicate for backwards compat with old contact page */
+
+#contact {
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#contact .heading {
+	text-align: center;
+}
+
+#contact p {
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+
+#contact .inner {
+	display: grid;
+}
+
+/* old contact page */
+
+#contact .contact-info {
+	font-size: 0.9em;
+	color: hsl(var(--color-muted));
+}

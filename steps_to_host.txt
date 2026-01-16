@@ -1,0 +1,13 @@
+For hosting my site I used GitHub Pages since its free & easy to setup
+
+1. Create GitHub account
+2. Crate new public repo
+3. Upload site to repo
+4. Go to repo settings
+5. Under branch select main
+6. Press save
+7. The site will then be available at https://<user>.github.io/<repository>
+
+Note: the root page must be named index.html so for this repo first_page.html was renamed to index.html
+
+https://hbmillerr.github.io/personal_site/
