@@ -9,7 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 /*
-    Rose Pine
+    Colour Theme: sRose Pine
     https://github.com/rose-pine
 */
 
@@ -111,7 +111,11 @@ header .inner {
 
 header .logo {
   display: none;
+
+  white-space: nowrap;
+
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 @media (min-width: 520px) {
@@ -173,7 +177,7 @@ main {
   max-width: 1600px;
 
   /* padding: var(--page-top) var(--page-gutter); */
-  padding: min(8em, 10%) min(8em, 10%);
+  padding: min(6rem, 8%) min(8rem, 10%);
 }
 
 section {
